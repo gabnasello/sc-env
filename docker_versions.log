@@ -1,0 +1,43 @@
+v. 20211014
+
+R package added via conda:
+
+ - bioconductor-scater
+
+-------------------------------
+v. 20211011
+
+List of Python packages:
+
+ - numba==0.52.0
+ - jupyterlab
+ - jupyter_contrib_nbextensions
+ - louvain==0.7
+ - umap-learn==0.4.6
+ - pandas==1.2.5
+ - scanpy
+ - python-igraph
+ - leidenalg
+ - rpy2
+ - anndata2ri
+ - multicore-tsne
+ - scvelo
+ - pip
+
+List of R packages installed via conda:
+
+ - r-essentials
+ - r-devtools
+ - r-biocmanager
+ - r-rcolorbrewer
+ - r-remotes
+ - r-seurat 
+ - r-patchwork
+ - r-monocle3
+
+List of R packages installed within R:
+
+ - MAST
+ - scran
+ - DropletUtils
+ - clusterExperiment
