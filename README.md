@@ -23,9 +23,9 @@ Enjoy scRNA-seq data analysis!
 
 ## Run the image from DockerHub with docker-compose
 
-Downloading the ```docker-compose.yaml``` file is enough to pull the [DockerImage](https://hub.docker.com/repository/docker/gnasello/sc-env) and start the virtual environment.
+Downloading the ```docker-compose.yaml``` file is enough to pull the [Docker Image](https://hub.docker.com/repository/docker/gnasello/sc-env) and start the virtual environment.
 
-First, you have to run the ```docker-compose command``` where the .yaml file is located (you might need sudo privileges):
+First, you have to run the ```docker-compose``` command where the .yaml file is located (you might need sudo privileges):
 
 ```docker-compose up -d```
 
@@ -37,6 +37,6 @@ When the work is finished, you exit the Docker Container by pressing ```ctrl``` 
 
 ```docker-compose down -v```
 
-Where the -v flag removes alsp all volumes.
+Where the -v flag removes all volumes.
 
 
