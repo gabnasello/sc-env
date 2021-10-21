@@ -1,6 +1,6 @@
 # install miniconda from https://github.com/ContinuumIO/docker-images/tree/master/miniconda3/debian/Dockerfile
 # install R packages from https://github.com/theislab/single-cell-tutorial/blob/master/Dockerfile
-# install environmet.yml from Gabriele Nasello
+# install environment.yml from Gabriele Nasello
 # Activate conda environment in Dockerfile https://pythonspeed.com/articles/activate-conda-dockerfile/
 
 

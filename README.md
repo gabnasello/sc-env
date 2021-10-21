@@ -19,3 +19,24 @@ and run the following command to build the image (you might need sudo privileges
 Then you can follow the instructions in the [Docker repository](https://hub.docker.com/repository/docker/gnasello/sc-env) to use the virtual environment.
 
 Enjoy scRNA-seq data analysis!
+
+
+## Run the image from DockerHub with docker-compose
+
+Downloading the ```docker-compose.yaml``` file is enough to pull the [DockerImage](https://hub.docker.com/repository/docker/gnasello/sc-env) and start the virtual environment.
+
+First, you have to run the ```docker-compose command``` where the .yaml file is located (you might need sudo privileges):
+
+```docker-compose up -d```
+
+the detached ```-d``` mode allows you to continue using the terminal and run the service you have just created:
+
+```docker-compose run --service-ports singlecell-environment```
+
+When the work is finished, you exit the Docker Container by pressing ```ctrl``` + ```d```. You then need to stop and remove your containers as well as any network created.
+
+```docker-compose down -v```
+
+Where the -v flag removes alsp all volumes.
+
+
