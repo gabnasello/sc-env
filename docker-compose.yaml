@@ -5,6 +5,6 @@ services:
                 ports:
                  - 8888:8888
                 volumes:
-                 - /home/luna.kuleuven.be/u0128401:/root/host_home
+                 - /home/luna.kuleuven.be/u0128401:/root/host_home # change the path before ":" with the volume you want to mount
                 working_dir: '/root/host_home'
                 container_name:   singlecell-environment

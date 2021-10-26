@@ -4,7 +4,7 @@
 
 The ```Dockerfile``` creates a Docker Image on Debian and installs miniconda. After, it creates a virtual environment called sc-env from the ```environment.ylm``` file and install some extra R packages from the ```install_r_packages.R``` file.
 
-The full list of the Python and R packages installed is saved within the docker image in ```spec-conda-file.txt``` , ```package_versions_py.txt``` and ```package_versions_py.txt``` 
+The full list of the Python and R packages installed is saved within the docker image in ```spec-conda-file.txt``` , ```package_versions_py.txt``` and ```package_versions_r.txt``` 
 
 ## Create a new image
 

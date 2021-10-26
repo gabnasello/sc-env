@@ -9,6 +9,8 @@ dependencies:
  - r-biocmanager
  - r-rcolorbrewer
  - r-remotes
+ - r-svglite
+ - r-r.utils
  - r-seurat 
  - r-patchwork
  - r-monocle3
@@ -31,4 +33,5 @@ dependencies:
  - anndata2ri
  - multicore-tsne
  - scvelo
+ - opentsne
  - pip

@@ -18,7 +18,6 @@ RUN apt-get update -q && \
     apt-get install -q -y --no-install-recommends \
         bzip2 \
         ca-certificates \
-        git \
         libglib2.0-0 \
         libsm6 \
         libxext6 \
@@ -27,7 +26,6 @@ RUN apt-get update -q && \
         openssh-client \
         procps \
         subversion \
-        wget \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -68,6 +66,7 @@ RUN apt-get update -q && \
 	vim \
 	emacs \
 	git \
+    unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -125,3 +124,5 @@ RUN Rscript install_r_packages.R && \
 RUN pip freeze > ../package_versions_py.txt
   
 RUN conda list --explicit > ../spec-conda-file.txt
+
+RUN echo "conda env list" >> ~/.bashrc
