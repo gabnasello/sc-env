@@ -8,7 +8,7 @@ update.packages(ask=FALSE, repos='https://ftp.gwdg.de/pub/misc/cran/')
 
 ######------------######
 
-# Install Seurat-wrappers
+# Install Seurat-wrappers and avoid any issue related to GitHub API tokens
 system('wget https://github.com/satijalab/seurat-wrappers/archive/refs/heads/master.zip')
 system('unzip master.zip')
 system('mv seurat-wrappers-master/ seurat-wrappers/')
@@ -16,18 +16,23 @@ system('R CMD build seurat-wrappers')
 install.packages(list.files(pattern="[SeuratWrappers]*.tar.gz"), repos = NULL)
 system('rm -rf master.zip seurat-wrappers/ SeuratWrappers*.tar.gz')
 
-# Install sceasy
-#BiocManager::install('LoomExperiment', version = '3.13')
-#devtools::install_github(,'cellgeni/sceasy')
-
 # Install MAST
-BiocManager::install('MAST', version = '3.13')
+BiocManager::install('MAST')
 
 # Install scran
-BiocManager::install('scran', version = '3.13')
+BiocManager::install('scran')
 
 # Install DropletUtils
-BiocManager::install('DropletUtils', version = '3.13')
+BiocManager::install('DropletUtils')
 
 # Install clusterExperiment
-BiocManager::install('clusterExperiment', version = '3.13')
+BiocManager::install('clusterExperiment')
+
+# Install sceasy and avoid any issue related to GitHub API tokens
+BiocManager::install('LoomExperiment') # requirement for sceasy
+system('wget https://github.com/cellgeni/sceasy/archive/refs/heads/master.zip')
+system('unzip master.zip')
+system('mv sceasy-master/ sceasy//')
+system('R CMD build sceasy')
+install.packages(list.files(pattern="[sceasy]*.tar.gz"), repos = NULL)
+system('rm -rf master.zip sceasy/ sceasy*.tar.gz')

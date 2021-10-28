@@ -1,3 +1,33 @@
+v. 20211028
+
+R packages added via conda:
+
+ - r-latex2exp
+
+R package installed via R:
+
+ - LoomExperiment
+ - sceasy
+
+-------------------------------
+
+v. 20211026
+
+R packages added via conda:
+
+ - r-svglite
+ - r-r.utils
+
+Python package added via conda: 
+
+ - opentsne 
+
+R package installed via R:
+
+ - SeuratWrappers
+
+-------------------------------
+
 v. 20211014
 
 R package added via conda:

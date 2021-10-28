@@ -119,7 +119,7 @@ ENV LD_LIBRARY_PATH="opt/conda/envs/sc-env/lib/R/lib:${LD_LIBRARY_PATH}"
 ADD install_r_packages.R .
 
 RUN Rscript install_r_packages.R && \
-    Rscript -e 'writeLines(capture.output(sessionInfo()), "../package_versions_r.txt")' --default-packages=scran,RColorBrewer,monocle3,SingleCellExperiment,ggplot2,MAST,DropletUtils,Seurat,seurat-wrappers,sceasy
+    Rscript -e 'writeLines(capture.output(sessionInfo()), "../package_versions_r.txt")' --default-packages=scran,RColorBrewer,monocle3,SingleCellExperiment,ggplot2,MAST,DropletUtils,Seurat,SeuratWrappers,sceasy
   
 RUN pip freeze > ../package_versions_py.txt
   

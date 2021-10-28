@@ -3,23 +3,18 @@ channels:
  - conda-forge
  - bioconda
 dependencies:
-# - r-base
  - r-essentials
  - r-devtools
  - r-biocmanager
  - r-rcolorbrewer
  - r-remotes
  - r-svglite
+ - r-latex2exp
  - r-r.utils
  - r-seurat 
  - r-patchwork
  - r-monocle3
  - bioconductor-scater
-# - anndata==0.6.19 
-# - scipy==1.2.1
-# - r-reticulate
-# - loompy
-# - r-sceasy
  - numba==0.52.0
  - jupyterlab
  - jupyter_contrib_nbextensions
