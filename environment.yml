@@ -29,4 +29,5 @@ dependencies:
  - multicore-tsne
  - scvelo
  - opentsne
+ - plotly
  - pip

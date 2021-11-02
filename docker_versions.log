@@ -1,6 +1,14 @@
 v. 20211028
 
-R packages added via conda:
+Python package added via conda:
+
+ - plotly
+
+-------------------------------
+
+v. 20211028
+
+R package added via conda:
 
  - r-latex2exp
 
