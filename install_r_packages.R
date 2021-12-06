@@ -36,3 +36,13 @@ system('mv sceasy-master/ sceasy//')
 system('R CMD build sceasy')
 install.packages(list.files(pattern="[sceasy]*.tar.gz"), repos = NULL)
 system('rm -rf master.zip sceasy/ sceasy*.tar.gz')
+
+
+# Install Seurat-data and avoid any issue related to GitHub API tokens
+# devtools::install_github('satijalab/seurat-data')
+system('wget https://github.com/satijalab/seurat-data/archive/refs/heads/master.zip')
+system('unzip master.zip')
+system('mv seurat-data-master/ seurat-data//')
+system('R CMD build seurat-data')
+install.packages(list.files(pattern="[Seurat]*.tar.gz"), repos = NULL)
+system('rm -rf master.zip seurat-data/ Seurat*.tar.gz')

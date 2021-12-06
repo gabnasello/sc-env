@@ -1,3 +1,24 @@
+-------------------------------
+
+v. 20211203
+
+Python package added via pip:
+
+ - lckr-jupyterlab-variableinspector
+
+R packages added via conda:
+
+ - r-rstatix
+ - r-ggpubr
+ - r-ggsci
+ - r-repr
+
+R packages installed within R:
+
+ - SeuratData
+
+-------------------------------
+
 v. 20211028
 
 Python package added via conda:

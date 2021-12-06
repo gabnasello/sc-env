@@ -111,7 +111,7 @@ RUN conda env create -f environment.yml
 # Initialize conda in bash config fiiles:
 RUN conda init bash  && \
     echo "conda activate sc-env" >> ~/.bashrc && \
-    echo "alias jl='jupyter lab --allow-root --port=8888 --ip=0.0.0.0'" >> ~/.bashrc
+    echo "alias jl='export SHELL=/bin/bash; jupyter lab --allow-root --port=7777 --ip=0.0.0.0'" >> ~/.bashrc
 
 ENV PATH="opt/conda/envs/sc-env/lib/R/bin:${PATH}"
 ENV LD_LIBRARY_PATH="opt/conda/envs/sc-env/lib/R/lib:${LD_LIBRARY_PATH}"

@@ -11,6 +11,10 @@ dependencies:
  - r-svglite
  - r-latex2exp
  - r-r.utils
+ - r-rstatix
+ - r-ggpubr
+ - r-ggsci
+ - r-repr
  - r-seurat 
  - r-patchwork
  - r-monocle3
@@ -31,3 +35,5 @@ dependencies:
  - opentsne
  - plotly
  - pip
+ - pip:
+   - lckr-jupyterlab-variableinspector
