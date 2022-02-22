@@ -1,0 +1,28 @@
+docker build --no-cache -t gnasello/sc-env:latest .
+docker images
+docker rmi imageID -f
+
+
+docker pull gnasello/sc-env:latest
+
+docker run -it --rm -p 7777:7777 \
+            --volume $HOME:/home/host_home \
+            --workdir /home/host_home \
+            --entrypoint /usr/bin/bash \
+            --user root \
+            gnasello/sc-env:latest
+
+chmod -R 777 ./
+
+---------- Alternative with docker-compose --------------
+
+You need the docker-compose.yaml file
+
+docker-compose up -d
+docker-compose run --service-ports singlecell-environment
+
+When the work is finished, this command will stop your containers, 
+but it also removes the stopped containers as well as any networks that were created.
+The -v flag to remove all volumes too
+
+docker-compose down -v

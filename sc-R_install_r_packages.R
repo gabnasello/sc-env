@@ -8,6 +8,9 @@ update.packages(ask=FALSE, repos='https://ftp.gwdg.de/pub/misc/cran/')
 
 ######------------######
 
+# Install Seurat from CRAN
+install.packages('Seurat', repos = 'http://cran.us.r-project.org')
+
 # Install Seurat-wrappers and avoid any issue related to GitHub API tokens
 system('wget https://github.com/satijalab/seurat-wrappers/archive/refs/heads/master.zip')
 system('unzip master.zip')

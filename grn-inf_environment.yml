@@ -1,0 +1,19 @@
+name: grn-inf
+channels:
+ - conda-forge
+ - bioconda
+ - defaults
+dependencies:
+ - python=3.6
+ - r-essentials
+ - louvain
+ - numba
+ - cython
+ - pybedtools
+ - notebook
+ - pysam
+ - bash_kernel
+ - ipykernel
+ - pip
+ - pip:
+   - git+https://github.com/morris-lab/CellOracle.git

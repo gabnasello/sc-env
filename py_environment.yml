@@ -1,0 +1,19 @@
+name: sc-py
+channels:
+ - conda-forge
+ - bioconda
+dependencies:
+ - louvain
+ - umap-learn
+ - scanpy
+ - python-igraph
+ - leidenalg
+ - rpy2
+ - anndata2ri
+ - multicore-tsne
+ - scvelo
+ - opentsne
+ - plotly
+ - scirpy
+ - bash_kernel
+ - ipykernel

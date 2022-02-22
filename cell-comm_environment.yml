@@ -1,0 +1,10 @@
+name: cell-comm
+channels:
+ - conda-forge
+dependencies:
+ - python=3.7
+ - bash_kernel
+ - ipykernel
+ - pip
+ - pip:
+   - cellphonedb

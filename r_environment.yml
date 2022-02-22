@@ -1,0 +1,25 @@
+name: sc-R
+channels:
+ - conda-forge
+ - bioconda
+dependencies:
+ - r-essentials
+ - r-devtools
+ - r-biocmanager
+ - r-rcolorbrewer
+ - r-remotes
+ - r-latex2exp
+ - r-r.utils
+ - r-rstatix
+ - r-ggpubr
+ - r-ggsci
+ - r-repr
+# - r-seurat 
+ - r-patchwork
+ - r-monocle3
+ - bioconductor-scater
+ - numba
+ - rpy2
+ - anndata2ri
+ - ipykernel
+ - bash_kernel

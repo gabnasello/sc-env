@@ -1,5 +1,18 @@
 -------------------------------
 
+v. 20220222
+
+Docker container from gnasello/datascience-env:latest
+
+Conda environments added:
+
+- sc-R (for Seurat-based analysis)
+- sc-py (for scanpy-based analysis)
+- cell-comm (for cellphonedb-based analysis)
+- grn-inf (for CellOracle-based analysis)
+
+-------------------------------
+
 v. 20211203
 
 Python package added via pip:
