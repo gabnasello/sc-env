@@ -2,9 +2,7 @@
 
 ## How it works
 
-The ```Dockerfile``` creates a Docker Image on Debian and installs miniconda. After, it creates a virtual environment called sc-env from the ```environment.ylm``` file and install some extra R packages from the ```install_r_packages.R``` file.
-
-The full list of the Python and R packages installed is saved within the docker image in ```spec-conda-file.txt``` , ```package_versions_py.txt``` and ```package_versions_r.txt``` 
+The ```Dockerfile``` creates a Docker Image from [gabnasello/datascience-env](https://hub.docker.com/repository/docker/gnasello/datascience-env). It creates virtual environments from the ```r_environment.ylm``` (sc-R), ```py_environment.ylm``` (sc-py), ```cell-comm_environment.ylm``` (cell-comm) and the ```grn-inf_environment.ylm``` (grn-inf) files. Moreover, the ```Dockerfile``` installs some extra R packages from the ```sc-R_install_r_packages.R``` file.
 
 ## Create a new image
 
