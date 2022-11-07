@@ -6,8 +6,6 @@ dependencies:
  - louvain
  - umap-learn
  - scanpy
- - python-igraph
- - leidenalg
  - rpy2
  - anndata2ri
  - multicore-tsne
@@ -17,3 +15,7 @@ dependencies:
  - scirpy
  - bash_kernel
  - ipykernel
+ - pip
+ - pip:
+    - igraph
+    - leidenalg

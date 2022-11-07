@@ -2,6 +2,8 @@ docker build --no-cache -t gnasello/sc-env:latest .
 docker images
 docker rmi imageID -f
 
+docker build --no-cache -t gnasello/sc-env:20221024 .
+
 
 docker pull gnasello/sc-env:latest
 
@@ -11,6 +13,13 @@ docker run -it --rm -p 7777:7777 \
             --entrypoint /usr/bin/bash \
             --user root \
             gnasello/sc-env:latest
+
+docker run -it --rm -p 5555:5555 \
+            --volume $HOME:/home/host_home \
+            --workdir /home/host_home \
+            --entrypoint /usr/bin/bash \
+            --user root \
+            gnasello/sc-env:20221024
 
 chmod -R 777 ./
 

@@ -1,5 +1,11 @@
 -------------------------------
 
+v. 20221024
+
+Adding the "-p" argument to the "jl" command
+
+-------------------------------
+
 v. 20220222
 
 Docker container from gnasello/datascience-env:latest
