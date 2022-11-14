@@ -1,4 +1,4 @@
-FROM gnasello/datascience-env:latest
+FROM gnasello/datascience-env:20221107
 
 USER root
 
