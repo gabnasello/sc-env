@@ -1,10 +1,16 @@
 version: '3'
+
 services:
-        singlecell-environment:
-                image: gnasello/sc-env:latest
-                ports:
-                 - 8888:8888
-                volumes:
-                 - /home/luna.kuleuven.be/u0128401:/root/host_home # change the path before ":" with the volume you want to mount
-                working_dir: '/root/host_home'
-                container_name:   singlecell-environment
+  sc-env:
+    image: gnasello/sc-env:latest
+    build: .
+    ports:
+      - $JLPORT:$JLPORT
+      - $RSPORT:7878
+    volumes:
+      - $HOME_RESEARCHER:/home/researcher # change the path before ":" with the volume you want to mount
+    working_dir: /home/researcher
+    user: root
+    environment:
+       - JLPORT=${JLPORT}
+       - RSPORT=${RSPORT}
