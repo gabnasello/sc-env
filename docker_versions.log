@@ -1,7 +1,7 @@
 -------------------------------
 v. 2022-01-25
 
-Update base docker file to gnasello/datascience-env:2022-01-23
+Update base docker file to gnasello/datascience-env:2022-01-19
 
 Add docker-compose command
 
