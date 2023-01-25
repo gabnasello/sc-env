@@ -1,40 +1,37 @@
-# Create a Docker Image with a conda environment for scRNA-seq data analysis
+# Docker Image for basic data science for scRNA-seq data analysis
 
-## How it works
+# Build the Docker Image
 
-The ```Dockerfile``` creates a Docker Image from [gabnasello/datascience-env](https://hub.docker.com/repository/docker/gnasello/datascience-env). It creates virtual environments from the ```r_environment.ylm``` (sc-R), ```py_environment.ylm``` (sc-py), ```cell-comm_environment.ylm``` (cell-comm) and the ```grn-inf_environment.ylm``` (grn-inf) files. Moreover, the ```Dockerfile``` installs some extra R packages from the ```sc-R_install_r_packages.R``` file.
+From the project folder, run the command below:
 
-## Create a new image
+```bash build.sh```
 
-First, clone the repo:
+# Run Docker container
 
-```git clone https://github.com/gabnasello/sc-env.git``` 
+## docker-compose approach (recommended)
 
-and run the following command to build the image (you might need sudo privileges):
-
-```docker build --no-cache -t sc-env .```
-
-Then you can follow the instructions in the [Docker repository](https://hub.docker.com/repository/docker/gnasello/sc-env) to use the virtual environment.
-
-Enjoy scRNA-seq data analysis!
-
-
-## Run the image from DockerHub with docker-compose
-
-Downloading the ```docker-compose.yaml``` file is enough to pull the [Docker Image](https://hub.docker.com/repository/docker/gnasello/sc-env) and start the virtual environment.
-
-First, you have to run the ```docker-compose``` command where the .yaml file is located (you might need sudo privileges):
+From the project folder, run the command below:
 
 ```docker-compose up -d```
 
-the detached ```-d``` mode allows you to continue using the terminal and run the service you have just created:
+To connect to a container that is already running ("datascience" is the service name):
 
-```docker-compose run --service-ports singlecell-environment```
+```docker-compose exec sc-env /bin/bash```
 
-When the work is finished, you exit the Docker Container by pressing ```ctrl``` + ```d```. You then need to stop and remove your containers as well as any network created.
+Close the container with:
 
-```docker-compose down -v```
+```docker-compose down```
 
-Where the -v flag removes all volumes.
+## Alternative approach
 
+You can run the following command:
 
+```docker run -d -it --rm  -p 7777:7777 -p 7878:7878 --volume $HOME:/home/researcher --user root --name sc-env gnasello/sc-env:latest```
+
+To connect to a container that is already running ("sc-env" is the container name):
+
+```docker exec -it sc-env /bin/bash```
+
+After use, you close the container with:
+
+```docker rm -f sc-env```
