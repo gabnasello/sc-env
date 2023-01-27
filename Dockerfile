@@ -2,7 +2,7 @@ FROM gnasello/datascience-env:2023-01-19
 
 # Configure environment
 ENV DOCKER_IMAGE_NAME='sc-env'
-ENV VERSION='2023-01-23' 
+ENV VERSION='2023-01-27' 
 
 USER root
 
