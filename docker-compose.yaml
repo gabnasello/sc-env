@@ -2,7 +2,7 @@ version: '3'
 
 services:
   sc-env:
-    image: gnasello/sc-env:latest
+    image: gnasello/sc-env:2023-01-28
     build: .
     ports:
       - $JLPORT:$JLPORT
@@ -11,6 +11,7 @@ services:
       - $HOME_RESEARCHER:/home/researcher # change the path before ":" with the volume you want to mount
     working_dir: /home/researcher
     user: root
+    hostname: localhost
     environment:
        - JLPORT=${JLPORT}
        - RSPORT=${RSPORT}

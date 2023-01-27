@@ -1,7 +1,12 @@
 -------------------------------
+v. 2022-01-28
+
+Downgrade base docker file to jupyter/r-notebook:2022-11-07
+
+-------------------------------
 v. 2022-01-27
 
-Update base docker file to gnasello/datascience-env:2022-01-19
+Update base docker file to gnasello/datascience-env:2023-01-19
 
 Add docker-compose command
 

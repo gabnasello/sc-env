@@ -1,10 +1,17 @@
-FROM gnasello/datascience-env:2023-01-19
+FROM jupyter/r-notebook:2022-11-07
 
 # Configure environment
 ENV DOCKER_IMAGE_NAME='sc-env'
-ENV VERSION='2023-01-27' 
+ENV VERSION='2023-01-28' 
 
-USER root
+# Docker name to shell prompt
+ENV PS1A="[docker] \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$"
+RUN echo 'PS1=$PS1A' >> ~/.bashrc
+RUN echo 'conda activate base' >> ~/.bashrc
+
+# How to connect all conda envs to jupyter notebook
+# https://stackoverflow.com/questions/61494376/how-to-connect-r-conda-env-to-jupyter-notebook
+RUN conda install -y -n base nb_conda_kernels
 
 # Create sc-R environment and install R packages
 ADD sc-R/r_environment.yml .
@@ -39,6 +46,7 @@ SHELL ["conda", "run", "-n", "grn-inf", "/bin/bash", "-c"]
 
 RUN pip install pysam \
  && conda install numpy scipy cython numba matplotlib scikit-learn h5py click \
+ && conda install -c bioconda pybedtools \
  && pip install velocyto \
  && pip install celloracle
 
@@ -48,4 +56,10 @@ RUN /opt/conda/envs/grn-inf/bin/Rscript grn-inf_install_r_packages.R
 
 RUN echo "conda env list" >> ~/.bashrc
 
-USER jovyan
+# Set the jl command to create a JupytetLab shortcut
+ADD scripts/launch_jupyterlab.sh /
+RUN echo "alias jl='bash /launch_jupyterlab.sh'" >> ~/.bashrc
+
+ADD scripts/entrypoint.sh /
+ADD scripts/message.sh /
+RUN echo "bash /message.sh" >> ~/.bashrc
