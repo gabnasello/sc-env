@@ -1,5 +1,7 @@
 # Docker Image for basic data science for scRNA-seq data analysis
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gabnasello/sc-env/HEAD)
+
 # Build the Docker Image
 
 From the project folder, run the command below:
