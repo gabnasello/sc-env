@@ -6,12 +6,9 @@ services:
     build: .
     ports:
       - $JLPORT:$JLPORT
-      - $RSPORT:7878
     volumes:
       - $HOME_RESEARCHER:/home/researcher # change the path before ":" with the volume you want to mount
     working_dir: /home/researcher
-    user: root
     hostname: localhost
     environment:
        - JLPORT=${JLPORT}
-       - RSPORT=${RSPORT}
