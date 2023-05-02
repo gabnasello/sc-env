@@ -1,4 +1,13 @@
 -------------------------------
+v. 2022-05-01
+
+Downgrade base docker file to jupyter/r-notebook:2023-03-27
+
+Keep only sc-py and sc-R environments
+
+Add binder environment
+
+-------------------------------
 v. 2022-01-28
 
 Downgrade base docker file to jupyter/r-notebook:2022-11-07

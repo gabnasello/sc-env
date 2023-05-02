@@ -2,7 +2,7 @@ version: '3'
 
 services:
   sc-env:
-    image: gnasello/sc-env:2023-01-28
+    image: gnasello/sc-env:2023-05-01
     build: .
     ports:
       - $JLPORT:$JLPORT
