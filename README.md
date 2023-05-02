@@ -1,4 +1,4 @@
-# Docker Image for basic data science for scRNA-seq data analysis
+# Docker Image for scRNA-seq data analysis with Python and R
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gabnasello/sc-env/HEAD)
 
